@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-danger: var(--danger);
+  --color-danger-light: var(--danger-light);
+  --color-info: var(--info);
+  --color-info-light: var(--info-light);
+
+  --color-header-bg: var(--header-bg);
+  --color-header-text: var(--header-text);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-active: var(--sidebar-active);
+
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-up: slide-up 0.4s ease-out;
+  --animate-slide-in-right: slide-in-right 0.4s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes slide-in-right {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+}
+
+:root {
+  /* Primary — Medical Blue */
+  --primary: #1a6fa8;
+  --primary-light: #e8f4fd;
+  --primary-dark: #0d4f80;
+
+  /* Accent — Teal/Green */
+  --accent: #0d9e75;
+  --accent-light: #e1f5ee;
+  --accent-dark: #0a7a5c;
+
+  /* Neutral */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  /* Status */
+  --success: #0d9e75;
+  --success-light: #e1f5ee;
+  --warning: #e08a1a;
+  --warning-light: #fef3e2;
+  --danger: #d94040;
+  --danger-light: #fdeaea;
+  --info: #1a6fa8;
+  --info-light: #e8f4fd;
+
+  /* Sidebar */
+  --sidebar-bg: #ffffff;
+  --sidebar-active: #e8f4fd;
+  --sidebar-active-border: #1a6fa8;
+
+  /* Header */
+  --header-bg: #1a6fa8;
+  --header-text: #ffffff;
+
+  /* Footer */
+  --footer-bg: #1a2840;
+  --footer-text: rgba(255,255,255,0.7);
+  --footer-heading: #ffffff;
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-radius: 12px;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #0f172a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --border-strong: #334155;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --sidebar-bg: #1e293b;
+  --sidebar-active: rgba(26,111,168,0.2);
+  --primary-light: rgba(26,111,168,0.15);
+  --accent-light: rgba(13,158,117,0.15);
+  --footer-bg: #0a0f1e;
+}
+
+/* Ocean theme */
+.theme-ocean {
+  --primary: #0891b2;
+  --primary-light: #e0f7fa;
+  --primary-dark: #0e7490;
+  --accent: #059669;
+  --header-bg: #0891b2;
+  --sidebar-active-border: #0891b2;
+  --sidebar-active: #e0f7fa;
+}
+
+/* Purple/Violet theme */
+.theme-purple {
+  --primary: #7c3aed;
+  --primary-light: #ede9fe;
+  --primary-dark: #6d28d9;
+  --accent: #0d9e75;
+  --header-bg: #7c3aed;
+  --sidebar-active-border: #7c3aed;
+  --sidebar-active: #ede9fe;
+}
+
+/* Emerald theme */
+.theme-emerald {
+  --primary: #059669;
+  --primary-light: #d1fae5;
+  --primary-dark: #047857;
+  --accent: #0891b2;
+  --header-bg: #059669;
+  --sidebar-active-border: #059669;
+  --sidebar-active: #d1fae5;
+}
+
+/* Rose theme */
+.theme-rose {
+  --primary: #e11d48;
+  --primary-light: #ffe4e6;
+  --primary-dark: #be123c;
+  --accent: #0d9e75;
+  --header-bg: #e11d48;
+  --sidebar-active-border: #e11d48;
+  --sidebar-active: #ffe4e6;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
